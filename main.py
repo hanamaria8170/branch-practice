@@ -4,12 +4,9 @@
 # 5의 배수, 'buzz'
 # 15의 배수, 'fizzbuzz'
 for i in range(10, 20+1):
-    if i % 15 == 0:
-        print('fizzbuzz')
-    if i % 3 == 0:
-        print('fizz')
-    elif i % 5 == 0:
-        print('buzz')
+    if i % 3 == 0 or i % 5 == 0:
+        print('fizz' * (i%3==0) + 'buzz' * (i%5==0))
+>>>>>>> fb-refactor
     else:
         print(i)
 
