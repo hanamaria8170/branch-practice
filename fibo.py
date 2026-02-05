@@ -1,7 +1,7 @@
-def  fibo ( k ):
-   k < 2 인 경우  :
-     k 반환 fibo ( k - 1 ) + fibo ( k - 2 )   
-        
-
-if  __name__  == “ __main__ ”:
-    print ( fibo ( 10 ))
+def fibo(n):
+    pad = {0: 0, 1: 1,}
+    def fib_inner(n):
+        if n not in pad:
+            pad[n] = fib_inner(n - 1) + fib_inner(n - 2)
+        return pad[n]
+    return fib_inner(n)
